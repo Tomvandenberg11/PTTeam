@@ -1,0 +1,78 @@
+.avatar-image {
+  width: 100%;
+}
+
+/* Quote Styling */
+.quote {
+  height: 100%;
+  margin: 0 25px 25px 25px;
+  padding: 20px 20px;
+  background-color: #f6fbfd;
+  border-radius: 15px;
+}
+
+.quote__title {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* Slider Styling */
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 280px;
+  margin: 0 25px;
+  padding: 20px 20px;
+}
+
+.slider__textName {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 25px #000000;
+}
+
+.slider__textName span {
+  font-weight: 400;
+}
+
+.slider__textSumary {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 15px #000000;
+}
+
+/* Action styling */
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.action__dislike img {
+  height: 60px;
+}
+
+.action__cookie img {
+  height: 70px;
+}
+
+.action__like img {
+  height: 60px;
+}
+
+.action__btn {
+  border: none;
+  background-color: transparent;
+}

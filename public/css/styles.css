@@ -1,0 +1,104 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  /* margin-top: 25px; */
+}
+
+header ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__heart {
+  font-size: 24px;
+  color: #fff2cb;
+}
+
+.header__settings {
+  font-size: 18px;
+  color: #383f51;
+}
+
+.header__title a {
+  color: #383f51;
+  font-size: 24px;
+}
+
+.header__title span {
+  font-weight: 700;
+}
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 30px;
+  left: 25px;
+  right: 25px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 60px;
+  background-color: #383f51;
+  border-radius: 15px;
+  padding: 0 30px;
+}
+
+.footer__icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* LIKES Page */
+.likes__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  margin-bottom: 20px;
+}
+
+.likes__header {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 25px;
+  margin-bottom: 10px;
+  color: #384051;
+}
+
+.likes__row h2 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #384051;
+}
+
+.likes__row span {
+  font-weight: 400;
+}
+
+.likes__row p {
+  font-size: 12px;
+}
+
+.likes__row img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}

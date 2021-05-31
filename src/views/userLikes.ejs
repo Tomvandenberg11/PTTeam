@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <header><%- include('partials/header') %></header>
+    <h1 class="likes__header">Jouw Likes</h1>
+    <% if (users.length > 0) {%> <% users.forEach(user => { %>
+    <section class="likes__row">
+      <img src="/uploads/<%= user.avatar %>" />
+      <div class="likes__info">
+        <h2><%= user.name %> <span><%= user.age %> </span></h2>
+        <p><%= user.message %></p>
+        <form action="/users/remove" method="POST">
+          <input type="hidden" name="name" value="<%= user.name %> " />
+          <button class="action__btn" type="submit">Verwijder</button>
+        </form>
+      </div>
+    </section>
+    <% }) %> <% }; %>
+    <footer><%- include('partials/footer') %></footer>
+  </body>
+</html>

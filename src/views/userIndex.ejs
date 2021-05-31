@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <!-- Header -->
+    <header><%- include('partials/header') %></header>
+
+    <!-- Quote -->
+    <section class="quote">
+      <h2 class="quote__title"><%= data.message %></h2>
+    </section>
+
+    <!-- Slider -->
+    <section
+      class="slider"
+      style="
+        background-image: url('uploads/<%= data.avatar %>');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+      "
+    >
+      <h2 class="slider__textName">
+        <%= data.name %>, <span><%= data.age %></span>
+      </h2>
+      <p class="slider__textSumary"><%= data.study %></p>
+    </section>
+
+    <!-- Action -->
+    <section class="action">
+      <a href="#" class="action__dislike">
+        <form action="/users/dislike" method="POST">
+          <input type="hidden" name="name" value="<%= data.name %> " />
+          <button class="action__btn" type="submit">
+            <img src="images/cross.png" alt="Dislike" />
+          </button>
+        </form>
+      </a>
+      <a href="#" class="action__cookie">
+        <img src="images/cookie.png" alt="info" />
+      </a>
+      <a href="#" class="action__like">
+        <form action="/users/like" method="POST">
+          <input type="hidden" name="name" value="<%= data.name %> " />
+          <button class="action__btn" type="submit">
+            <img src="images/heart.png" alt="like" />
+          </button>
+        </form>
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer><%- include('partials/footer') %></footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <header><%- include('partials/header') %></header>
+    <form action="/users" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="name" />
+      <input type="text" name="study" placeholder="study" />
+      <input type="text" name="message" placeholder="message" />
+      <input type="text" name="interests" placeholder="interests" />
+      <input type="number" name="age" placeholder="age" />
+      <input type="hidden" name="status" value="?" />
+      <input type="file" name="avatar" />
+      <button type="submit">Verzend</button>
+    </form>
+    <footer><%- include('partials/footer') %></footer>
+  </body>
+</html>
