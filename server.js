@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 
 // DB Connection
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost/mvc-app', {
+  .connect(process.env.MONGOBD_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
