@@ -16,7 +16,6 @@ const upload = multer({ storage: storage }).single('avatar');
 const userIndex = (req, res) => {
   User.find({ status: '?' })
     .then((result) => {
-      console.log(result);
       if (result.length > 0) {
         const rand = Math.floor(Math.random() * result.length);
         const data = result[rand];
@@ -56,7 +55,7 @@ const userCreatePost = (req, res) => {
         .then(() => {
           res.redirect('/users');
         })
-        .catch(() => console.log('fout'));
+        .catch((error) => console.log(error));
     }
   });
 };
