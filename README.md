@@ -25,3 +25,5 @@ PORT=3000
 MONGODB_URI=<connection string>
 
 ```
+
+Ai cool man test
