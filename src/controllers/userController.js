@@ -3,6 +3,8 @@ const multer = require('multer');
 const path = require('path');
 const User = require('../models/user');
 
+let viewCount = 0;
+
 // Multer
 const storage = multer.diskStorage({
   destination: 'public/uploads',
@@ -104,6 +106,15 @@ const userLikesRemovePost = (req, res) => {
     .catch((err) => console.log(err));
 };
 
+const userSessionCountGet = (req, res) => {
+  if (!req.session.viewCount) {
+    req.session.viewCount = 1;
+  } else {
+    req.session.viewCount += 1;
+  }
+  res.render('session', { viewCount: req.session.viewCount });
+}
+
 module.exports = {
   userIndex,
   userCreateGet,
@@ -112,4 +123,5 @@ module.exports = {
   userDislikePost,
   userLikesGet,
   userLikesRemovePost,
+  userSessionCountGet,
 };
