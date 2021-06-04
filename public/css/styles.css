@@ -1,5 +1,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mobile-container {
+  height: 765px;
+  width: 364px;
+  box-shadow: 0 0 5px 5px #aaaaaa;
+  position: relative;
+  border-radius: 10px;
 }
 
 /* Header styling */
@@ -42,7 +54,7 @@ header ul {
 
 /* Footer styling */
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 30px;
   left: 25px;
   right: 25px;
