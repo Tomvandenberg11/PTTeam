@@ -44,6 +44,7 @@ const userCreatePost = (req, res) => {
     } else {
       const user = new User({
         name: req.body.name,
+        password: req.body.password,
         study: req.body.study,
         message: req.body.message,
         interests: req.body.interests,
