@@ -145,10 +145,6 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
-.create_form input:focus {
-  border: 1px solid black;
-}
-
 .create_form input:last-of-type {
   padding: 0;
   border: none;
