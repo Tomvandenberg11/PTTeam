@@ -1,8 +1,13 @@
+const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 
 const indexGet = (req, res) => {
-  res.render('index');
+  if (req.session.loggedIn) {
+    res.render('index');
+  } else {
+    res.render('login');
+  }
 };
 
 const loginGet = (req, res) => {
@@ -18,6 +23,9 @@ const loginPost = (req, res) => {
       const verified = bcrypt.compareSync(submittedPass, storedPass);
 
       if (verified) {
+        req.session.loggedIn = true;
+        req.session.name = result.name;
+
         res.redirect('/users');
       } else {
         res.render('login', { status: 'Foute wachtwoord of gebruikersnaam' });
@@ -28,8 +36,16 @@ const loginPost = (req, res) => {
   });
 };
 
+const logoutGet = (req, res) => {
+  req.session.destroy((err) => {
+    console.log(err);
+  });
+  res.render('login', { status: '' });
+};
+
 module.exports = {
   indexGet,
   loginGet,
   loginPost,
+  logoutGet,
 };

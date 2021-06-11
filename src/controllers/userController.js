@@ -17,19 +17,23 @@ const upload = multer({ storage: storage }).single('avatar');
 
 // User Index
 const userIndex = (req, res) => {
-  User.find({ status: '?' })
-    .then((result) => {
-      if (result.length > 0) {
-        const rand = Math.floor(Math.random() * result.length);
-        const data = result[rand];
-        res.render('userIndex', { data });
-      } else {
-        res.render('userIndexEmpty');
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  if (req.session.loggedIn) {
+    User.find({ status: '?' })
+      .then((result) => {
+        if (result.length > 0) {
+          const rand = Math.floor(Math.random() * result.length);
+          const data = result[rand];
+          res.render('userIndex', { data });
+        } else {
+          res.render('userIndexEmpty');
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    res.render('login', { status: '' });
+  }
 };
 
 // User Create - GET
