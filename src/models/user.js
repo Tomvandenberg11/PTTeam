@@ -12,6 +12,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    wachtwoord: {
+      type: String,
+      required: true,
+    },
     message: {
       type: String,
       required: true,

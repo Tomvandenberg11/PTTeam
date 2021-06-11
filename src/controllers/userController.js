@@ -2,6 +2,7 @@
 const multer = require('multer');
 const path = require('path');
 const User = require('../models/user');
+const bcrypt = require('bcryptjs');
 
 let viewCount = 0;
 
@@ -42,8 +43,11 @@ const userCreatePost = (req, res) => {
     if (err) {
       res.send(err);
     } else {
+      const passwordHash = bcrypt.hashSync(req.body.wachtwoord, 10);
+
       const user = new User({
         name: req.body.name,
+        wachtwoord: passwordHash,
         study: req.body.study,
         message: req.body.message,
         interests: req.body.interests,
@@ -113,7 +117,7 @@ const userSessionCountGet = (req, res) => {
     req.session.viewCount += 1;
   }
   res.render('session', { viewCount: req.session.viewCount });
-}
+};
 
 module.exports = {
   userIndex,
