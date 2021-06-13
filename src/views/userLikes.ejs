@@ -6,7 +6,7 @@
   <body>
     <div class="mobile-container">
       <header><%- include('partials/header') %></header>
-      <h1 class="likes__header">Jouw Likes</h1>
+      <h1 class="likes__header">Jouw likes</h1>
       <% if (users.length > 0) {%> <% users.forEach(user => { %>
       <section class="likes__row">
         <img src="/uploads/<%= user.avatar %>" />
@@ -15,11 +15,13 @@
           <p><%= user.message %></p>
           <form action="/users/remove" method="POST">
             <input type="hidden" name="name" value="<%= user.name %> " />
-            <button class="action__btn" type="submit">Verwijder</button>
+            <button class="action__btn" type="submit">Verwijder like</button>
           </form>
         </div>
       </section>
-      <% }) %> <% }; %>
+      <% }) %> <% } else {
+      %><p class="likes__row">Je hebt nog niemand geliked</p><%
+      } %>
       <footer><%- include('partials/footer') %></footer>
     </div>
   </body>
