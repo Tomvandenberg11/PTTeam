@@ -145,7 +145,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
-.create_form input:last-of-type {
+.create_form input[type=file] {
   padding: 0;
   border: none;
   margin: 10px 0;

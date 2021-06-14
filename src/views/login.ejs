@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<head>
+  <%- include('partials/head') %>
+</head>
   <body>
-    <h1><%= status %></h1>
-    <form action="/login" method="POST">
-      <input type="text" name="name" />
-      <input type="password" name="password" />
-      <button type="submit">Login</button>
-    </form>
+    <div class="mobile-container">
+      <!-- Header -->
+      <header>
+        <ul>
+          <li class="header__title">
+            <a href="/">Intern <span>Match</span></a>
+          </li>
+        </ul>
+      </header>
+
+      <h1 class="likes__header">Inloggen</h1>
+      <form action="/login" method="POST" class="create_form">
+        <input type="text" name="name" placeholder="Naam" />
+        <input type="password" name="password" placeholder="Wachtwoord" />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   </body>
 </html>
