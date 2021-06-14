@@ -6,7 +6,7 @@ const indexGet = (req, res) => {
   if (req.session.loggedIn) {
     res.render('index');
   } else {
-    res.render('login', {status: ''});
+    res.render('login', { status: '' });
   }
 };
 
