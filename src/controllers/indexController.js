@@ -28,7 +28,7 @@ const loginPost = (req, res) => {
 
         res.redirect('/users');
       } else {
-        res.render('login', { status: 'Foute wachtwoord of gebruikersnaam' });
+        res.render('login', { status: 'Fout wachtwoord of gebruikersnaam' });
       }
     } else {
       console.log(err);

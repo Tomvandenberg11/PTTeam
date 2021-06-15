@@ -1,8 +1,8 @@
 /* eslint-disable object-shorthand */
 const multer = require('multer');
 const path = require('path');
-const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const User = require('../models/user');
 
 let viewCount = 0;
 
