@@ -94,13 +94,17 @@ const userDislikePost = (req, res) => {
 
 // User Likes - GET
 const userLikesGet = (req, res) => {
-  User.find({ status: 'liked' })
-    .then((users) => {
-      res.render('userLikes', { users });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  if (req.session.loggedIn) {
+    User.find({ status: 'liked' })
+      .then((users) => {
+        res.render('userLikes', { users });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    res.render('login', { status: '' });
+  }
 };
 
 // User Likes Remove - POST
@@ -115,12 +119,16 @@ const userLikesRemovePost = (req, res) => {
 };
 
 const userSessionCountGet = (req, res) => {
-  if (!req.session.viewCount) {
-    req.session.viewCount = 1;
-  } else {
-    req.session.viewCount += 1;
-  }
-  res.render('session', { viewCount: req.session.viewCount });
+if (req.session.loggedIn) {
+    if (!req.session.viewCount) {
+      req.session.viewCount = 1;
+    } else {
+      req.session.viewCount += 1;
+    }
+    res.render('session', { viewCount: req.session.viewCount });
+} else {
+    res.render('login', { status: '' });
+}
 };
 
 module.exports = {
