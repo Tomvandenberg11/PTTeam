@@ -1,12 +1,18 @@
-const express = require('express');
-const session = require('express-session');
 const path = require('path');
+const http = require('http');
+const express = require('express');
+const socketio = require('socket.io');
+const session = require('express-session');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const indexRoutes = require('./src/routes/indexRoute');
 const userRoutes = require('./src/routes/userRoute');
+const chatRoutes = require('./src/routes/chatRoute');
 
 const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
+
 mongoose.set('useFindAndModify', false);
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -33,8 +39,14 @@ app.use(
   }),
 );
 
+io.on('connection', (socket) => {
+  socket.on('chatMessage', (msg) => {
+    io.emit('chat message', msg);
+  });
+});
 // Routes
 app.use('/', indexRoutes);
 app.use('/users', userRoutes);
+app.use('/chat', chatRoutes);
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+server.listen(port, () => console.log(`Listening on port ${port}`));
