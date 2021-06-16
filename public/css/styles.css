@@ -129,7 +129,7 @@ footer {
 .create_form {
   padding: 20px 25px 25px;
   width: 100%;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .create_form input {
@@ -161,4 +161,24 @@ footer {
   border-radius: 5px;
   margin-top: 30px;
   margin-bottom:30px;
+}
+
+.account_section {
+  padding: 0 25px;
+}
+
+.account_picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 30px auto 0;
+}
+
+.account_text {
+  margin-top: 30px;
+}
+
+.account_text span {
+  font-weight: bold;
 }
