@@ -10,7 +10,11 @@
       <form action="/users" method="POST" enctype="multipart/form-data" class="create_form">
         <input type="text" name="name" placeholder="Naam" />
         <input type="password" name="wachtwoord" placeholder="Wachtwoord" />
-        <input type="text" name="study" placeholder="Studie" />
+        <input type="radio" id="student" name="accountType" value="student">
+        <label for="male">Student</label><br>
+        <input type="radio" id="company" name="accountType" value="company">
+        <label for="female">Bedrijf</label><br>
+        <input type="text" name="study" placeholder="Studie/bedrijf" />
         <input type="text" name="message" placeholder="Bericht" />
         <input type="text" name="interests" placeholder="Intresses" />
         <input type="number" name="age" placeholder="Leeftijd" />

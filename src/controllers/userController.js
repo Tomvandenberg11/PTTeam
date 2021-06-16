@@ -52,6 +52,7 @@ const userCreatePost = (req, res) => {
       const user = new User({
         name: req.body.name,
         wachtwoord: passwordHash,
+        accountType: req.body.accountType,
         study: req.body.study,
         message: req.body.message,
         interests: req.body.interests,

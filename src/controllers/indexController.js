@@ -24,6 +24,11 @@ const loginPost = (req, res) => {
       const verified = bcrypt.compareSync(submittedPass, storedPass);
 
       if (verified) {
+        // if (result.accountType === 'company') {
+        //   req.session.accountType === 'company'
+        // } else {
+        //   req.session.accountType === 'student'
+        // }
         req.session.loggedIn = true;
         req.session.name = result.name;
 
