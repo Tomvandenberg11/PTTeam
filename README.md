@@ -11,12 +11,12 @@ Met Intern Match kan je als student gemakkelijk stagebedrijven vinden in jouw br
 * Like/dislike
 * Chat
 * Uploaden van foto's
-* Overzicht gelikede personen
+* Overzicht gelikete personen
 <br><br><br>
 
 ## Hoe kan je het installeren 💻
 
-1. Clone deze repositoryin je terminal:
+1. Clone deze repository in je terminal:
    `git clone https://github.com/wongsrila/intern-match.git`
 
 2. navigeer naar je nieuwe folder: `cd intern-match`
@@ -51,7 +51,7 @@ SECRET=<secret key name>
 
 ## Licence 📋
 
-Binnen dit project word er gebruik gemaakt van een [MIT](https://opensource.org/licenses/MIT) licence
+Binnen dit project wordt er gebruik gemaakt van een [MIT](https://opensource.org/licenses/MIT) licence
 <br><br><br>
 
 ## Mogelijk gemaakt door ✅
