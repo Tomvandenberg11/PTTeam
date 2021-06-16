@@ -1,11 +1,11 @@
-# Intern Match 
+# Intern Match 🔍
 
 Met Intern Match kan jij als student of als Bedrijf, elkaar op een gemakkelijke manier vinden 🚀! Je hebt het vast wel meegemaakt, je stuurt naar tientallen bedrijven een sollicitatiebrief waarop de meeste antwoorden "...helaas hebben wij geen plek meer..." of het bedrijf reageert helemaal niet 😡.
 
 Met Intern Match kan je als student gemakkelijk stagebedrijven vinden in jouw branche. je kan een interessant bedrijf liken. Als het bedrijf jou ook hebt geliked, zijn jullie een match geworden. Nadat je een match bent kan je met elkaar chatten met als doel een contract te krijgen 🤝.
 <br><br><br>
 
-## Features
+## Features 📑
 * Inloggen/registreren
 * Beveiligde wachtwoorden
 * Like/dislike
@@ -14,7 +14,7 @@ Met Intern Match kan je als student gemakkelijk stagebedrijven vinden in jouw br
 * Overzicht gelikede personen
 <br><br><br>
 
-## Hoe kan je het installeren
+## Hoe kan je het installeren 💻
 
 1. Clone deze repositoryin je terminal:
    `git clone https://github.com/wongsrila/intern-match.git`
@@ -40,7 +40,7 @@ SECRET=<secret key name>
 7. Start de app met 'npm run dev'
 <br><br><br>
 
-## Topics
+## Topics 🗃
 
 * Sessions
 * Password Hashing
@@ -49,12 +49,12 @@ SECRET=<secret key name>
 * Socket.io
 <br><br><br>
 
-## Licence
+## Licence 📋
 
 Binnen dit project word er gebruik gemaakt van een [MIT](https://opensource.org/licenses/MIT) licence
 <br><br><br>
 
-## Mogelijk gemaakt door
+## Mogelijk gemaakt door ✅
 * [Tom van den Berg](https://github.com/Tomvandenberg11)
 * [First Wongsrila](https://github.com/wongsrila)
 * [Bas de Roller](https://github.com/Rellor)
