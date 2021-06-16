@@ -124,7 +124,6 @@ const userAccountGet = (req, res) => {
     User.find({ name: req.session.name })
       .then((result) => {
         const data = result[0];
-        console.log(result);
         res.render('userAccount', { data });
       })
       .catch((err) => {
