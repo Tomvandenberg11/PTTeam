@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <div class="mobile-container">
+      <!-- Header -->
+      <header><%- include('partials/header') %></header>
+
+      <h1 class="likes__header">Mijn account</h1>
+      <!-- Quote -->
+      <section class="quote">
+        <h2 class="quote__title"><%= data.message %></h2>
+      </section>
+
+      <!-- Slider -->
+      <section
+        class="slider"
+        style="
+          background-image: url('/uploads/<%= data.avatar %>');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 15px;
+        "
+      >
+        <h2 class="slider__textName">
+          <%= data.name %>, <span><%= data.age %></span>
+        </h2>
+        <p class="slider__textSumary"><%= data.study %></p>
+      </section>
+
+      <!-- Footer -->
+      <footer><%- include('partials/footer') %></footer>
+    </div>
+  </body>
+</html>

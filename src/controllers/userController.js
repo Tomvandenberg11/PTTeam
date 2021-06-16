@@ -4,7 +4,7 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 
-let viewCount = 0;
+// let viewCount = 0;
 
 // Multer
 const storage = multer.diskStorage({
@@ -132,6 +132,22 @@ if (req.session.loggedIn) {
 }
 };
 
+const userAccountGet = (req, res) => {
+  if (req.session.loggedIn) {
+    User.find({ name: req.session.name })
+      .then((result) => {
+        const data = result[0];
+        console.log(result);
+        res.render('userAccount', { data });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    res.render('login', { status: '' });
+  }
+};
+
 module.exports = {
   userIndex,
   userCreateGet,
@@ -141,4 +157,5 @@ module.exports = {
   userLikesGet,
   userLikesRemovePost,
   userSessionCountGet,
+  userAccountGet,
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
