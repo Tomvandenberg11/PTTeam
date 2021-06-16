@@ -11,5 +11,6 @@ router.post('/dislike', userController.userDislikePost);
 router.get('/likes', userController.userLikesGet);
 router.post('/remove', userController.userLikesRemovePost);
 router.get('/session', userController.userSessionCountGet);
+router.get('/account', userController.userAccountGet);
 
 module.exports = router;
