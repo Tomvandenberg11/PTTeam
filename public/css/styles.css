@@ -141,6 +141,10 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
+.create_form input[type=radio] {
+  width: auto;
+}
+
 .create_form input[type=file] {
   padding: 0;
   border: none;
