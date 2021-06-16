@@ -47,9 +47,9 @@ SECRET=<secret key name>
 
 ## Licence
 
-Binnen dit project word er gebruik gemaakt van een [MIT] (https://opensource.org/licenses/MIT) licence
+Binnen dit project word er gebruik gemaakt van een [MIT](https://opensource.org/licenses/MIT) licence
 
 ## Mogelijk gemaakt door
-[Tom van den Berg] (https://github.com/Tomvandenberg11)
-[First Wongsrila] (https://github.com/wongsrila)
-[Bas de Roller] (https://github.com/Rellor)
+* [Tom van den Berg](https://github.com/Tomvandenberg11)
+* [First Wongsrila](https://github.com/wongsrila)
+* [Bas de Roller](https://github.com/Rellor)
