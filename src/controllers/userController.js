@@ -119,19 +119,6 @@ const userLikesRemovePost = (req, res) => {
     .catch((err) => console.log(err));
 };
 
-const userSessionCountGet = (req, res) => {
-if (req.session.loggedIn) {
-    if (!req.session.viewCount) {
-      req.session.viewCount = 1;
-    } else {
-      req.session.viewCount += 1;
-    }
-    res.render('session', { viewCount: req.session.viewCount });
-} else {
-    res.render('login', { status: '' });
-}
-};
-
 const userAccountGet = (req, res) => {
   if (req.session.loggedIn) {
     User.find({ name: req.session.name })
@@ -156,6 +143,5 @@ module.exports = {
   userDislikePost,
   userLikesGet,
   userLikesRemovePost,
-  userSessionCountGet,
   userAccountGet,
 };
