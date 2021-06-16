@@ -8,24 +8,31 @@
       <!-- Header -->
       <header><%- include('partials/header') %></header>
 
+      <%
+        function capitalizeFirstLetter(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        var today = data.createdAt
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = dd + '-' + mm + '-' + yyyy;
+      %>
+
       <h1 class="likes__header">Mijn account</h1>
 
       <section class="account_section">
         <img class="account_picture" src="/uploads/<%= data.avatar %>">
         <p class="account_text">
-          <span>Naam:</span> <%- data.name%><br><br>
-          <span>Studie/bedrijf:</span> <%- data.study%><br><br>
-          <span>Bericht:</span> <%- data.message%><br><br>
-          <span>Intresses:</span> <%- data.interests%><br><br>
+          <span>Naam:</span> <%- capitalizeFirstLetter(data.name) %><br><br>
+          <span>Type account:</span> <%- capitalizeFirstLetter(data.accountType || 'Student') %><br><br>
+          <span>Studie/bedrijf:</span> <%- capitalizeFirstLetter(data.study) %><br><br>
+          <span>Bericht:</span> <%- capitalizeFirstLetter(data.message) %><br><br>
+          <span>Intresses:</span> <%- capitalizeFirstLetter(data.interests) %><br><br>
           <span>Leeftijd:</span> <%- data.age%><br><br>
-          <%
-            var today = data.createdAt
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
 
-            today = dd + '-' + mm + '-' + yyyy;
-          %>
           <span>Account aangemaakt op:</span> <%- today %><br><br>
           <a href="/users/likes">Gelikede personen</a><br><br><br>
         </p>
