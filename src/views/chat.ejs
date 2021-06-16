@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <div class="mobile-container">
+      <!-- Header -->
+      <header><%- include('partials/header') %></header>
+
+      <ul id="messages"></ul>
+      <form id="form" action="">
+        <input id="input" autocomplete="off" /><button>Send</button>
+      </form>
+
+      <!-- Footer -->
+      <footer><%- include('partials/footer') %></footer>
+
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/script.js"></script>
+    </div>
+  </body>
+</html>
