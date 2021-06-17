@@ -9,6 +9,7 @@ const indexRoutes = require('./src/routes/indexRoute');
 const userRoutes = require('./src/routes/userRoute');
 const chatRoutes = require('./src/routes/chatRoute');
 
+// Creating the app
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
@@ -39,11 +40,13 @@ app.use(
   }),
 );
 
+// Socket.io
 io.on('connection', (socket) => {
   socket.on('chatMessage', (msg) => {
     io.emit('chat message', msg);
   });
 });
+
 // Routes
 app.use('/', indexRoutes);
 app.use('/users', userRoutes);
