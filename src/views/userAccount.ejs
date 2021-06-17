@@ -24,7 +24,7 @@
       <h1 class="likes__header">Mijn account</h1>
 
       <section class="account_section">
-        <img class="account_picture" src="/uploads/<%= data.avatar %>">
+        <img class="account_picture" style="object-fit: cover" src="/uploads/<%= data.avatar %>">
         <p class="account_text">
           <span>Naam:</span> <%- capitalizeFirstLetter(data.name) %><br><br>
           <span>Type account:</span> <%- capitalizeFirstLetter(data.accountType || 'Student') %><br><br>
