@@ -133,7 +133,7 @@ footer {
 }
 
 .create_form input {
-  margin-bottom: 10px;
+  margin: 10px 0px;
   width: 91%;
   padding: 10px 10px;
   border-radius: 5px;
@@ -181,4 +181,8 @@ footer {
 
 .account_text span {
   font-weight: bold;
+}
+
+.radio_div {
+  display: flex;
 }

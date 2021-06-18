@@ -16,8 +16,10 @@
 
       <h1 class="likes__header">Inloggen</h1>
       <form action="/login" method="POST" class="create_form">
-        <input type="text" name="name" placeholder="Naam" />
-        <input type="password" name="password" placeholder="Wachtwoord" />
+        <label for="name">Naam:</label>
+        <input type="text" name="name" id="name" placeholder="Naam" />
+        <label for="password">Wachtwoord:</label>
+        <input type="password" name="password" id="password" placeholder="Wachtwoord" />
         <p> <%- status %> </p>
         <button type="submit">Login</button>
         <a class="register_link" href="users/create"> Registreren </a>
