@@ -133,7 +133,7 @@ footer {
 }
 
 .create_form input {
-  margin: 10px 0px;
+  margin: 9px 0px;
   width: 91%;
   padding: 10px 10px;
   border-radius: 5px;
@@ -143,6 +143,7 @@ footer {
 
 .create_form input[type=radio] {
   width: auto;
+  margin: 0px 10px 10px 0px;
 }
 
 .create_form input[type=file] {
@@ -185,4 +186,9 @@ footer {
 
 .radio_div {
   display: flex;
+  margin: 5px 0px;
+}
+
+#company {
+  margin-left: 10px;
 }
