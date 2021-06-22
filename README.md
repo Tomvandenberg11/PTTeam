@@ -37,8 +37,8 @@ SECRET=<secret key name>
 
 ```
 
-7. Start de app met 'npm run dev'
-8. Start in een ander terminal tab de command 'gulp'
+7. Start de app met `npm run dev`
+8. Start in een ander terminal tab de command `gulp`
 <br><br><br>
 
 ## Topics 🗃
